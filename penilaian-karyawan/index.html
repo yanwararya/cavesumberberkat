@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Persetujuan Penilaian Karyawan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PT. CAVE SUMBER BERKAT</h1>
+        <img src="assets/logo-csb-original.jpeg" alt="Logo PT Cave Sumber Berkat" class="logo">
+        <h2>Syarat dan Ketentuan Penilaian</h2>
+        <p>Harap membaca dengan seksama sebelum melanjutkan ke proses penilaian karyawan.</p>
+        <div class="agreement">
+            <ol>
+                <li>Penilai bertanggung jawab atas semua nilai yang diberikan.</li>
+                <li>Dilarang membagikan link yang diberikan, baik kepada sesama penilai ataupun kepada atasan.</li>
+                <li>Dilarang meminta bantuan untuk mengisi kepada rekan kerja / atasan / bawahan.</li>
+                <li>Jika ditemukan pelanggaran maka akan diberikan surat peringatan oleh HRD.</li>
+                <li>Jika ada eror atau kesulitan dalam mengisi, silahkan hub HRD.</li>
+            </ol>
+            <p>
+                Dengan ini, saya menyatakan bahwa saya telah memahami dan menyetujui seluruh ketentuan yang berlaku
+                terkait proses penilaian karyawan yang bersifat rahasia dan profesional. Informasi yang diberikan
+                dalam penilaian ini akan digunakan secara adil dan sesuai dengan kebijakan perusahaan.
+            </p>
+        </div>
+        <form onsubmit="event.preventDefault(); showPopup();">
+            <input type="checkbox" id="agree" name="agree" required>
+            <label for="agree">Saya menyetujui syarat dan ketentuan di atas.</label>
+            <br><br>
+            <button type="submit">Lanjutkan ke Penilaian</button>
+        </form>
+    </div>
+    <div id="popup-overlay">
+        <div id="popup">
+            <p>Silahkan Pilih Menu:</p>
+            <button onclick="redirectTo('menu-penilaian.html')">Cave Sumber Berkat 1 dan 2</button>
+            <button onclick="redirectTo('menu-penilaian-csb3.html')">Cave Sumber Berkat 3</button>
+        </div>
+    </div>
+    <div id="loading">Sedang memuat...</div>
+    <script>
+        function showPopup() {
+            const popupOverlay = document.getElementById('popup-overlay');
+            const popup = document.getElementById('popup');
+            popupOverlay.style.display = 'flex';
+            popup.style.display = 'block';
+        }
+        function redirectTo(url) {
+            const loading = document.getElementById('loading');
+            loading.style.display = 'block';
+            setTimeout(() => {
+                window.location.href = url;
+            }, 2000); // efek loading selama 2 detik
+        }
+    </script>
+</body>
+</html>
