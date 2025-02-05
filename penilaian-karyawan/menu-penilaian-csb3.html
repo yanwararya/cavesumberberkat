@@ -78,34 +78,27 @@
             background-color: #007bff;
         }
         
+        .btn-primary:hover {
+            background-color: #7c8fa2;
+            transform: scale(1.05);
+        }
         .btn {
-            display: inline-block;
-            width: 250px;
-            height: 30px;
-            margin: 5px 5px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 230px;
+            min-height: 20px;
+            margin: 5px;
             border-radius: 8px;
-            font-size: 14px;
-            text-align:center;
+            font-size: 13px;
+            text-align: center;
             text-decoration: none;
             color: #fff;
             transition: background-color 0.3s ease, transform 0.2s ease;
-        }
-        .btn-primary:hover {
-            background-color: #45a049;
-            transform: scale(1.05);
-        }
-        button {
-            display: inline-block;
-            background: #007bff;
-            color: #fff;
-            padding: 12px 10px;
-            font-size: 16px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background 0.3s ease, transform 0.2s ease;
-            width: 100%;
-            text-transform: uppercase;
+            padding: 4px;
+            white-space: normal;
+            word-wrap: break-word;
+            text-align: center;
         }
         button:hover {
             background: #0056b3;
@@ -179,37 +172,68 @@
             font-size: 18px;
             z-index: 1100;
         }
+
+        .btn-secondary {
+            background-color: #45a049;
+        }
+        
+        .btn-secondary:hover {
+            background-color: #7c8fa2;
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>PT. CAVE SUMBER BERKAT</h1>
-        <img src="assets/logo-csb-original.jpeg" alt="Logo PT Cave Sumber Berkat" class="logo">
         <h2>Syarat dan Ketentuan Penilaian</h2>
-        <p>Sebelum melakukan penilaian pastikan nama anda sesuai dengan jabatan yang tertera. Jika ada kendala error atau kesulitan saat akan dan ketika proses penilaian, silahkan hubungi HRD.</p>
+        <p>Pastikan memilih sesuai dengan jabatan masing masing. Jika ada kendala error atau kesulitan saat akan melakukan penilaian atau ketika proses penilaian berlangsung, silahkan hubungi HRD.</p>
         <div class="agreement">
             <p>
                 <ol style="text-align: left; margin-left: 20px; margin-bottom: 20px; color: #555;">
                     <h3>General Manager</h3>
-                    <li><a href="https://forms.gle/qPc2qU1PVmiLhpMw5" class="btn btn-primary">General Manager</a></li>
+                    <li><a href="https://forms.gle/qPc2qU1PVmiLhpMw5" class="btn btn-primary">General Manager Form</a>
+                        <a href="#" class="btn btn-secondary">General Manager Approval</a>
+                    </li>
                     <h3>HRD</h3>
-                    <li><a href="https://forms.gle/fkxqX41CYZcKBY6z9" class="btn btn-primary">Supervisor HRD</a></li>
+                    <li><a href="https://forms.gle/fkxqX41CYZcKBY6z9" class="btn btn-primary">Supervisor HRD Form</a>
+                        <a href="#" class="btn btn-secondary">Supervisor HRD Approval</a>
+                    </li>
                     <h3>Accounting</h3>
-                    <li><a href="https://forms.gle/jTn5vDonAswiVg777" class="btn btn-primary">Supervisor Accounting</a></li>
+                    <li><a href="https://forms.gle/jTn5vDonAswiVg777" class="btn btn-primary">Supervisor Accounting Form</a>
+                        <a href="#" class="btn btn-secondary">Supervisor Accounting Approval</a>
+                    </li>
                     <h3>Gudang</h3>
-                    <li><a href="https://forms.gle/BZNCeAe4ZSsRfXRp9" class="btn btn-primary">Kepala Gudang</a></li>
+                    <li><a href="https://forms.gle/BZNCeAe4ZSsRfXRp9" class="btn btn-primary">Kepala Gudang Form</a>
+                        <a href="#" class="btn btn-secondary">Kepala Gudang Approval</a>
+                    </li>
                     <h3>Maintenance</h3>
-                    <li><a href="https://forms.gle/Mm8pPeiwYWXDNZdg8" class="btn btn-primary">Kepala Maintenance</a></li>
+                    <li><a href="https://forms.gle/Mm8pPeiwYWXDNZdg8" class="btn btn-primary">Kepala Maintenance Form</a>
+                        <a href="#" class="btn btn-secondary">Kepala Maintenance Approval</a>
+                    </li>
                     <h3>Quality Control</h3>
-                    <li><a href="https://forms.gle/uKAbKNBAAy1vjgTP7" class="btn btn-primary">Supervisor Quality Control</a></li>
+                    <li><a href="https://forms.gle/uKAbKNBAAy1vjgTP7" class="btn btn-primary">Supervisor Quality Control Form</a>
+                        <a href="#" class="btn btn-secondary">Supervisor Quality Control Approval</a>
+                    </li>
                     <h3>Thermoforming</h3>
-                    <li><a href="https://forms.gle/giEUiyFMW35s1Bau6" class="btn btn-primary">Supervisor Thermoforming</a></li>
-                    <li><a href="https://forms.gle/zfUws26Xuo4fxYtf8" class="btn btn-primary">Kepala Shift Thermoforming</a></li> 
+                    <li><a href="https://forms.gle/giEUiyFMW35s1Bau6" class="btn btn-primary">Supervisor Thermoforming Form</a>
+                        <a href="#" class="btn btn-secondary">Supervisor Thermoforming Approval</a>
+                    </li>
+                    <li><a href="https://forms.gle/zfUws26Xuo4fxYtf8" class="btn btn-primary">Kepala Shift Thermoforming Form</a>
+                        <a href="#" class="btn btn-secondary">Kepala Shift Thermoforming Approval</a>
+                    </li> 
                     <h3>Injection</h3>
-                    <li><a href="https://forms.gle/9YV5miNYwXmxrjbq9" class="btn btn-primary">Supervisor Injection</a></li>
-                    <li><a href="https://forms.gle/sgXv9kyaoLrLSTMg9" class="btn btn-primary">Kepala Mesin Injection</a></li>
-                    <li><a href="https://forms.gle/8rEJBQ72cGiryZDj7" class="btn btn-primary">Kepala Assembly Injection</a></li>
-                    <li><a href="https://forms.gle/hETWgRnQx5KuZTNt9" class="btn btn-primary">Kepala Shift Injection</a></li>
+                    <li><a href="https://forms.gle/9YV5miNYwXmxrjbq9" class="btn btn-primary">Supervisor Injection Form</a>
+                        <a href="#" class="btn btn-secondary">Supervisor Injection Approval</a>
+                    </li>
+                    <li><a href="https://forms.gle/sgXv9kyaoLrLSTMg9" class="btn btn-primary">Kepala Mesin Injection Form</a>
+                        <a href="#" class="btn btn-secondary">Kepala Mesin Injection Approval</a>
+                    </li>
+                    <li><a href="https://forms.gle/8rEJBQ72cGiryZDj7" class="btn btn-primary">Kepala Assembly Injection Form</a>
+                        <a href="#" class="btn btn-secondary">Kepala Assembly Injection Approval</a>
+                    </li>
+                    <li><a href="https://forms.gle/hETWgRnQx5KuZTNt9" class="btn btn-primary">Kepala Shift Injection Form</a>
+                        <a href="#" class="btn btn-secondary">Kepala Shift Injection Approval</a>
+                    </li>
                 </ol>
             </p>
         </div>
