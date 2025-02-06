@@ -14,12 +14,14 @@
             background-size: cover;
             color: #333;
         }
+        
         .logo {
             display: block;
-            margin: 5px auto 0; /* Center the logo below the title */
-            width: 90px; /* Adjusted size */
+            margin: 5px auto 0;
+            width: 90px;
             height: auto;
         }
+        
         .container {
             max-width: 600px;
             margin: 50px auto;
@@ -31,32 +33,20 @@
             animation: fadeIn 0.8s ease-in-out;
         }
         
-        h1 {
-            font-size: 32px;
-            margin-bottom: 10px;
-            color: #000000;
+        h1, h2, h3 {
             text-align: center;
-            position: relative;
         }
         
-        h2 {
-            font-size: 20px;
-            text-align: center;
-            position: relative;
-        }
-        
-        h3 {
-            font-size: 20px;
-            text-align: left;
-            margin-left: 5px;
-            margin-bottom: 2px;
-        }
+        h1 { font-size: 32px; color: #000; }
+        h2 { font-size: 20px; }
+        h3 { font-size: 18px; text-align: left; margin-left: 5px; }
         
         p {
             margin-bottom: 20px;
             color: #555;
             text-align: justify;
-        } 
+        }
+        
         .agreement {
             padding: 15px;
             background: #f9f9f9;
@@ -65,23 +55,9 @@
             color: #444;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
             border-radius: 5px;
-            text-align:justify;
+            text-align: justify;
         }
         
-        input[type="checkbox"] {
-            margin-right: 10px;
-            transform: scale(1.2);
-            accent-color: #007bff;
-        }
-        
-        .btn-primary {
-            background-color: #007bff;
-        }
-        
-        .btn-primary:hover {
-            background-color: #7c8fa2;
-            transform: scale(1.05);
-        }
         .btn {
             display: inline-flex;
             align-items: center;
@@ -98,14 +74,22 @@
             padding: 4px;
             white-space: normal;
             word-wrap: break-word;
-            text-align: center;
         }
-        button:hover {
-            background: #0056b3;
-            transform: scale(1.02);
+        
+        .btn-primary {
+            background-color: #007bff;
         }
-        button:active {
-            background: #00408a;
+        .btn-primary:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+        
+        .btn-secondary {
+            background-color: #45a049;
+        }
+        .btn-secondary:hover {
+            background-color: #357a38;
+            transform: scale(1.05);
         }
         
         @keyframes fadeIn {
@@ -118,189 +102,167 @@
                 transform: translateY(0);
             }
         }
+        
         @media (max-width: 768px) {
             .container {
                 padding: 20px;
             }
-        
-            h1 {
-                font-size: 22px;
-            }
-        
-            button {
-                font-size: 14px;
-            }
-        }
-        #popup {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            border: 1px solid #ccc;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            text-align: center;
-            z-index: 1000;
-        }
-        #popup button {
-            margin: 5px;
-            padding: 10px 20px;
-            cursor: pointer;
-        }
-        #popup-overlay {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 999;
-        }
-        #loading {
-            display: none;
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: rgba(0, 0, 0, 0.8);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 5px;
-            font-size: 18px;
-            z-index: 1100;
-        }
-
-        .btn-secondary {
-            background-color: #45a049;
-        }
-        
-        .btn-secondary:hover {
-            background-color: #7c8fa2;
-            transform: scale(1.05);
+            h1 { font-size: 22px; }
+            .btn { font-size: 14px; }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h2>Syarat dan Ketentuan Penilaian</h2>
-        <p>Pastikan memilih sesuai dengan jabatan masing masing. Jika ada kendala error atau kesulitan saat akan melakukan penilaian atau ketika proses penilaian berlangsung, silahkan hubungi HRD.</p>
+        <p>Pastikan memilih sesuai dengan jabatan masing-masing. Jika ada kendala atau kesulitan saat melakukan penilaian, silakan hubungi HRD.</p>
+        
         <div class="agreement">
-            <ol style="text-align: left; margin-left: 20px; margin-bottom: 20px; color: #555;">
+            <ol style="text-align: left; margin-left: 20px; color: #555;">
                 <h3>General Manager</h3>
-                <li><a href="https://forms.gle/vwirSCY9skBz3WpB6" class="btn btn-primary">General Manager Form</a>
+                <li>
+                    <a href="https://forms.gle/vwirSCY9skBz3WpB6" class="btn btn-primary">General Manager Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/1ek539G6z239BSwZhvfWU1vamvqSt1G4YkaHErX9XfoA/edit?usp=sharing" class="btn btn-secondary">General Manager Approval</a>
                 </li>
+                
                 <h3>HRD</h3>
-                <li><a href="https://forms.gle/TgUBk6ps7aTTLzZe9" class="btn btn-primary">Manager HRD Form</a>
+                <li>
+                    <a href="https://forms.gle/TgUBk6ps7aTTLzZe9" class="btn btn-primary">Manager HRD Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/1zHikhyiYmSHlZJRgD_6LLaVlw1ClcjQxpsyGdGijCos/edit?usp=sharing" class="btn btn-secondary">Manager HRD Approval</a>
                 </li>
-                <li><a href="https://forms.gle/ovi4HxB47CpDi6g58" class="btn btn-primary">Koordinator Satpam Form</a>
-                    <a href="https://docs.google.com/spreadsheets/d/1g4HuT-Agh0TeEsIPZCrDv-UyE8OgNn2Ly_nC8qa-3bk/edit?usp=sharing" class="btn btn-secondary">Koordinator Satpam Approval</a>
-                </li>
+                
                 <h3>IT</h3>
-                <li><a href="https://forms.gle/LEYkpSzU5SV6vwPh8" class="btn btn-primary">Supervisor IT Form</a>
+                <li>
+                    <a href="https://forms.gle/LEYkpSzU5SV6vwPh8" class="btn btn-primary">Supervisor IT Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/10aJ7dx7xqSIviFb7xY0DZN-1yE1qOClocU28r43Z2Vw/edit?usp=sharing" class="btn btn-secondary">Supervisor IT Approval</a>
                 </li>
+            
                 <h3>Accounting</h3>
                 <li><a href="https://forms.gle/uSjY2RNkMNTGPK6F8" class="btn btn-primary">Manager Accounting Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/1p1uGKFmY7a9znk7DqqnOhgveJBhZEqAj-4UeZFxM8Gk/edit?usp=sharing" class="btn btn-secondary">Manager Accounting Approval</a>
                 </li>
+
                 <h3>Logsitik</h3>
                 <li><a href="https://forms.gle/1U1mWxdRq2yYnuBg8" class="btn btn-primary">Supervisor Logistik Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/1ckN3qG1FyaGFmdaQzaofvXbV24XwzMa_c6IDm-iY1rY/edit?usp=sharing" class="btn btn-secondary">Supervisor Logistik Approval</a>
                 </li>
+
                 <h3>Marketing</h3>
                 <li><a href="https://forms.gle/i9sVaC28uU5odkiGA" class="btn btn-primary">Supervisor Marketing - Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/14Xye5tGwB8Z68cuCb_xU7s3yUjAd_fh9wluFI190xnM/edit?usp=sharing" class="btn btn-secondary">Supervisor Marketing - Approval</a>
                 </li>
+
                 <h3>Pembelian</h3>
                 <li><a href="https://forms.gle/3je4DHs38EbkDpdK7" class="btn btn-primary">Supervisor Pembelian Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/1kX9xzYyltVs9gFxYVYh-nEJ64qhbNNKl0JeV6r6MWPw/edit?usp=sharing" class="btn btn-secondary">Supervisor Pembelian Approval</a>
                 </li>
+
                 <h3>Sortir</h3>
                 <li><a href="https://forms.gle/cHfzhAvc7javXnAHA" class="btn btn-primary">Pengawas Sortir Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/1Zryzd_eaFk5RFyuAX8fPjfuzqqBuW31AJwmMcpr0Jy8/edit?usp=sharing" class="btn btn-secondary">Pengawas Sortir Approval</a>
                 </li>
+
                 <li><a href="https://forms.gle/5EP97rryomHQ7c5B6" class="btn btn-primary">Kepala Regu Sortir Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/1kAC7NBD6UptexEWChlhPbUvkoJpQJlJS0BGN66FUQdg/edit?usp=sharing" class="btn btn-secondary">Kepala Regu Sortir Approval</a>
                 </li>
+
                 <h3>Compound</h3>
                 <li><a href="https://forms.gle/Hb8vJxMpzteAUY4f6" class="btn btn-primary">Manager Compound Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/1d2uoOd60HbbcwRk6dSTyRuiLNjD7BUm9k3xe9MYsLDo/edit?usp=sharing" class="btn btn-secondary">Manager Compound Approval</a>
                 </li>
+
                 <li><a href="https://forms.gle/BiEb1YbkYnnCNqWcA" class="btn btn-primary">Supervisor Prod Compound Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/1lEzCuCJR-kTOiWFLYnYQk64mby69OcMfg0xgRHY8BZM/edit?usp=sharing" class="btn btn-secondary">Supervisor Prod Compound Approval</a>
                 </li>
+
                 <li><a href="https://forms.gle/oxzJyQfvTDevjcvL6" class="btn btn-primary">Kepala Shift Compound Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/1Ob0lizOnLOpXA1lE4VgfnPSSe9lF6JTdRrTkQ4HDPxE/edit?usp=sharing" class="btn btn-secondary">Kepala Shift Compound Approval</a>
                 </li>
+
                 <li><a href="https://forms.gle/JYUnnuBynFq8HRPy5" class="btn btn-primary">Pelaksana/Admin Produksi Additive Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/1ES6T21jRtwN9TY0GjWiXfewWLA1dJRo8abCo91ym73U/edit?usp=sharing" class="btn btn-secondary">Pelaksana/Admin Produksi Additive Approval</a>
                 </li>
+
                 <li><a href="https://forms.gle/BKFgTLBAJzu9AhDT8" class="btn btn-primary">Pelaksana Gudang Compound Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/1krEtCOjo_X4cyyOdmye6H1TdgTX56CLOJD1AeklZH28/edit?usp=sharing" class="btn btn-secondary">Pelaksana Gdg Compound Approval</a>
                 </li>
+
                 <h3>Biji dan Rajang</h3>
                 <li><a href="https://forms.gle/od7SdvuPQPTm5CAi8" class="btn btn-primary">Supervisor Produksi Biji dan Rajang Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/1p-Z-BwerAHKgPEcBelwPQuMpwWwxy4T9Ra2GqfNXXjk/edit?usp=sharing" class="btn btn-secondary">Supervisor Produksi Biji dan Rajang Approval</a>
                 </li>
+
                 <li><a href="https://forms.gle/9NrAfMfw28xvVUVt5" class="btn btn-primary">Supervisor Teknisi Biji & Compound Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/1rx7SHR6Wx9L2qQ0wL16S4MKCeVgPku_s-W8dRgjZTt4/edit?usp=sharing" class="btn btn-secondary">Supervisor Teknisi Biji & Compound Approval</a>
                 </li>
+
                 <li><a href="https://forms.gle/ir1RYPdaHPsQRDre7" class="btn btn-primary">Kepala Mesin Biji dan Rajang Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/1nkk1zoSt9urc7iAamUyLCGhUjRJtQMozIhtLoB3r8cY/edit?usp=sharing" class="btn btn-secondary">Kepala Mesin Biji dan Rajang Approval</a>
                 </li>
+
                 <li><a href="https://forms.gle/W1qRY7yYMoUSNAi26" class="btn btn-primary">Kepala Shift Biji Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/1B1ou_YRHdr31f3y5KO4XvP0ArfOSv1elWEPW0fiWT3s/edit?usp=sharing" class="btn btn-secondary">Kepala Shift Biji Approval</a>
                 </li>
+
                 <h3>Kantong</h3>
                 <li><a href="https://forms.gle/HDRKcNbF7UgHkRi38" class="btn btn-primary">Supervisor PPIC Kantong Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/1xKBgGf1ZpDBjTa78_LhTOKoweAVDYOEf5qwM10obZOs/edit?usp=sharing" class="btn btn-secondary">Supervisor PPIC Kantong Approval</a>
                 </li>
+
                 <li><a href="https://forms.gle/8oysrwsnE2FXMSYb9" class="btn btn-primary">Supervisor Produksi Kantong Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/1dWm1IhWEQuePYzLQdEKZtQ7EqCkj1_hubR1arGTAiGY/edit?usp=sharing" class="btn btn-secondary">Supervisor Produksi Kantong Approval</a>
                 </li>
+
                 <li><a href="https://forms.gle/yGgpk3vnv3AAJ3GM7" class="btn btn-primary">Supervisor Teknisi Kantong Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/1kLfAM_bdmyxidopJy616y6I4pqIDeNbADqryqWGwQlc/edit?usp=sharing" class="btn btn-secondary">Supervisor Teknisi Kantong Approval</a>
                 </li>
+
                 <li><a href="https://forms.gle/FND5K8iV6GmNYia69" class="btn btn-primary">Kepala Mesin Gulung Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/18GGs5pdPd6L15vwQOyb4kS_1XIbU47--NiiiqcFtNbM/edit?usp=sharing" class="btn btn-secondary">Kepala Mesin Gulung Approval</a>
                 </li>
+
                 <li><a href="https://forms.gle/m54pgZ1tif5vntGN8" class="btn btn-primary">Kepala Mesin Potong Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/14sK8B1LElkpzJYh6EPOjPAOHhXw0E3h3KMm328Kbgn0/edit?usp=sharing" class="btn btn-secondary">Kepala Mesin Potong Approval</a>
                 </li>
+
                 <li><a href="https://forms.gle/yeJjesHk3GNV1sxSA" class="btn btn-primary">Kepala Produksi Packing</a>
                     <a href="https://docs.google.com/spreadsheets/d/1g0QeWlZ6fyXUW6I0VFdthGjIPUl4XrH4XBI_pfkLf4Y/edit?usp=sharing" class="btn btn-secondary">Kepala Produksi Packing</a>
                 </li>
+
                 <li><a href="https://forms.gle/w55BxzJwJGADQ7TZ9" class="btn btn-primary">Kepala Gudang Bahan Kantong Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/1HRDhqj1c-FMCa3g6j-SmXF_n0jdRUSVKB-E3gcnghz8/edit?usp=sharing" class="btn btn-secondary">Kepala Gdg Bahan Kantong Approval</a>
                 </li>
+
                 <li><a href="https://forms.gle/acxjWQD8X6oyFSLE9" class="btn btn-primary">Kepala Shift Gulung Form</a>
-                    <a href="https://docs.google.com/spreadsheets/d/18GGs5pdPd6L15vwQOyb4kS_1XIbU47--NiiiqcFtNbM/edit?usp=sharing" class="btn btn-secondary">Kepala Shift Gulung Approval</a>
+                    <a href="https://docs.google.com/spreadsheets/d/1-uGgZ6n0_8VhZuFAOJPtpnoyqR7KitUa4GiWz_bJfYE/edit?usp=sharing" class="btn btn-secondary">Kepala Shift Gulung Approval</a>
                 </li>
+
                 <li><a href="https://forms.gle/7M9hjt71rsdVnwGR8" class="btn btn-primary">Kepala Shift Potong Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/1jzqT8yULO0gVdru5_BrVKMtgr72OGbQrMxkg-6YC-Rc/edit?usp=sharing" class="btn btn-secondary">Kepala Shift Potong Approval</a>
                 </li>
+
                 <h3>Gudang Bahan</h3>
                 <li><a href="https://forms.gle/WAKwhESqQ9nEjYYD7" class="btn btn-primary">Supervisor Gudang Bahan Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/1Vy_LZHecS5FwSke1GT4yBS7i-Z1vI6aR1muZTWCuBDY/edit?usp=sharing" class="btn btn-secondary">Supervisor Gudang Bahan Approval</a>
                 </li>
+
                 <li><a href="https://forms.gle/NYaXGTby6ASSiomV7" class="btn btn-primary">Pelaksana Gudang Bahan Form</a>
-                    <a href="#" class="btn btn-secondary">Pelaksana Gudang Bahan Approval</a>
+                    <a href="https://docs.google.com/spreadsheets/d/1jR7QDmxu5CwLQojmsKpua4UEg02HRABVUXXGySdSuY8/edit?usp=sharing" class="btn btn-secondary">Pelaksana Gudang Bahan Approval</a>
                 </li>
+
                 <li><a href="https://forms.gle/3VwKfyx8EEn3HGiA6" class="btn btn-primary">Koordinator Forklift</a>
-                    <a href="#" class="btn btn-secondary">Koordinator Forklift</a>
+                    <a href="https://docs.google.com/spreadsheets/d/11gk8GHLm2I9Q_Mmw0I8Qv8arfAyEY_-BiTjkG6Hy2rI/edit?usp=sharing" class="btn btn-secondary">Koordinator Forklift</a>
                 </li>
+
                 <h3>Gudang Jadi</h3>
                 <li><a href="https://forms.gle/m27NnPFQ3GsWwgMo9" class="btn btn-primary">Supervisor Gudang Jadi Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/1GudAsUvkmQKC6oig4WZCko9B_r1HB4mbu4UhvUnF4g4/edit?usp=sharing" class="btn btn-secondary">Supervisor Gudang Jadi Approval</a>
                 </li>
+
                 <li><a href="https://forms.gle/CiNFLkFHaxisiLxNA" class="btn btn-primary">Pelaksana Gudang Jadi Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/1a0H1diyRwmu4M3FkWdD3RlwAfUrWIBG5lYas6woOtwI/edit?usp=sharing" class="btn btn-secondary">Pelaksana Gudang Jadi Approval</a>
                 </li>
+                
                 <h3>Gudang Sparepart</h3>
                 <li><a href="https://forms.gle/rPxyJYvPMkvy63h28" class="btn btn-primary">Supervisor Gudang Sparepart Form</a>
                     <a href="https://docs.google.com/spreadsheets/d/1QvGOkZT7BIftXAdO4453Yy84N4PmfJwrHB4PuimGjyk/edit?usp=sharing" class="btn btn-secondary">Supervisor Gudang Sparepart Approval</a>
